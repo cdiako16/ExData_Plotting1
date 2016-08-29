@@ -11,6 +11,7 @@ unzip(zipfile="./data/powerconsumption.zip",exdir="./data")
 
 library(dplyr)
 
+# Reading in the data
 powerConsumption <- read.table("./data/household_power_consumption.txt", header= TRUE, sep =";", na.strings = "?")
 powerConsumption <- tbl_df(powerConsumption)
 

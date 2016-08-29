@@ -10,6 +10,7 @@ download.file(fileUrl, destfile = "./data/powerconsumption.zip")
 unzip(zipfile="./data/powerconsumption.zip",exdir="./data")
 
 library(dplyr)
+# reading in the data
 powerConsumption <- read.table("./data/household_power_consumption.txt", header= TRUE, sep =";", na.strings = "?")
 head(powerConsumption)
 str(powerConsumption)

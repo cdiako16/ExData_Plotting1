@@ -10,6 +10,7 @@ unzip(zipfile="./data/powerconsumption.zip",exdir="./data")
 
 library(dplyr)
 
+# Reading in the data
 powerConsumption <- read.table("./data/household_power_consumption.txt", header= TRUE, sep =";", na.strings = "?")
 powerConsumption <- tbl_df(powerConsumption)
 consumptionDate <- filter(powerConsumption, grepl("^[1,2]/2/2007", Date))
